@@ -1,6 +1,6 @@
 = Markdown Toolbar
 
-Markdown Toolbar is an lightweight helper buttons that appear over textarea you will provice
+Markdown Toolbar is an lightweight helper buttons that appear over textarea
 
 
 == Installation
@@ -23,3 +23,7 @@ Markdown Toolbar requires you to add such lines to your application.js
 
 and to application.css
   *= require markdown-toolbar
+  
+Then you can add toolbar to any textarea by adding a class +markdown-toolbar+ to it
+
+  <%= f.text_area :text, :size => '90x30', :class => "markdown-toolbar" %>
