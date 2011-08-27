@@ -1,0 +1,25 @@
+= Markdown Toolbar
+
+Markdown Toolbar is an lightweight helper buttons that appear over textarea you will provice
+
+
+== Installation
+
+In <b>Rails 3.1</b>, add this to your Gemfile and run the +bundle+ command.
+
+  gem "markdown-toolbar"
+
+Alternatively, you can install it as a plugin.
+
+  rails plugin install git://github.com/fuksito/markdown-toolbar.git
+
+
+== Getting Started
+
+Markdown Toolbar requires you to add such lines to your application.js
+
+>  //= require jquery-fieldselection
+>  //= require markdown-toolbar
+
+and to application.css
+>  *= require markdown-toolbar
