@@ -18,8 +18,8 @@ Alternatively, you can install it as a plugin.
 
 Markdown Toolbar requires you to add such lines to your application.js
 
->  //= require jquery-fieldselection
->  //= require markdown-toolbar
+  //= require jquery-fieldselection
+  //= require markdown-toolbar
 
 and to application.css
->  *= require markdown-toolbar
+  *= require markdown-toolbar
