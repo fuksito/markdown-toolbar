@@ -6,7 +6,7 @@ $ ->
 class MarkdownToolbar
   constructor: (@textarea) ->
     this.add_toolbar()
-
+    
   add_toolbar: ->
     @textarea.before "<div class='markdown-toolbar-panel'><div class='mdt_buttons'></div></div>"
     @panel = @textarea.prev ".markdown-toolbar-panel"
