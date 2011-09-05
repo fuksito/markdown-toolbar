@@ -18,12 +18,12 @@ Alternatively, you can install it as a plugin.
 
 Markdown Toolbar requires you to add such lines to your application.js
 
-  //= require jquery-fieldselection
   //= require markdown-toolbar
 
 and to application.css
+
   *= require markdown-toolbar
   
 Then you can add toolbar to any textarea by adding a class +markdown-toolbar+ to it
 
-  <%= f.text_area :text, :size => '90x30', :class => "markdown-toolbar" %>
+  <%= f.text_area :text, :class => "markdown-toolbar" %>
