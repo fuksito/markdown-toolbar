@@ -30,7 +30,7 @@
 }
 <% %w{ bold italic strike list_bullets list_numbers heading_2 heading_3 link image}.each_with_index do |button, index| %>
 .mdt_button_<%= button %> {
-  background: url('/assets/text_<%= button %>.png');
+  background: url( image_path(<%= "text_#{button}.png" %> ) );
   &:active{
     background-position: 1px 1px;
   }
