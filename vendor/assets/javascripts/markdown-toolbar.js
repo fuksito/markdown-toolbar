@@ -1,2 +1,2 @@
 //= require jquery-fieldselection
-//= require toolbar
+//= require toolbar.js

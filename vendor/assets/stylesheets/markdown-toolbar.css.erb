@@ -1,11 +1,10 @@
 .markdown-toolbar-panel {
-  height:20px;
-  border:1px solid #aaa;
+  height: 20px;
+  border: 1px solid #aaa;
   background: #fafafa;
-}
-.markdown-toolbar-panel {
   margin-bottom:0;
-  border-bottom:0;  
+  border-bottom:0;
+  overflow: hidden;
 }
 .markdown-upload-panel {
   margin-top:0;
@@ -18,6 +17,8 @@
   display:inline-block;
   margin-top:2px;
   margin-bottom:2px;  
+  height: 20px;
+  overflow: hidden;
 }
 
 .mdt_button {
@@ -28,11 +29,19 @@
   float:left;
   margin-left:2px;
 }
+
+/* Check this out:
+
+<%= self.class.ancestors %>
+
+<%= self.public_methods.inspect %>
+*/
+
 <% %w{ bold italic strike list_bullets list_numbers heading_2 heading_3 link image}.each_with_index do |button, index| %>
 .mdt_button_<%= button %> {
-  background: url( '<%= asset_path "/images/text_#{button}.png" %>' );
-  &:active{
+  background: url( <%= asset_path "text_#{button}.png" %>);
+}
+.mdt_button_<%= button %>:active{
     background-position: 1px 1px;
-  }
 }
 <% end %>
