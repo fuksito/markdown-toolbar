@@ -3,7 +3,8 @@ Markdown Toolbar
 
 Markdown Toolbar is an lightweight helper buttons that appear over textarea
 
-![image](http://www.vitalik.com.ua/images/markdown-toolbar.png)
+[![image](http://www.vitalik.com.ua/images/markdown-toolbar.png)](http://www.vitalik.com.ua/markdown-toolbar/)
+
 
 Try a demonstration [demonstration](http://www.vitalik.com.ua/markdown-toolbar/)
 
@@ -11,7 +12,7 @@ Try a demonstration [demonstration](http://www.vitalik.com.ua/markdown-toolbar/)
 Installation
 ------------
 
-In `Rails 3.1`, add this to your Gemfile and run the +bundle+ command.
+In `Rails 3.1`, add this to your Gemfile and run the **bundle** command.
 
     gem "markdown-toolbar"
 
@@ -31,6 +32,6 @@ and to application.css
 
     *= require markdown-toolbar
   
-Then you can add toolbar to any textarea by adding a class +markdown-toolbar+ to it
+Then you can add toolbar to any textarea by adding a class **markdown-toolbar** to it
 
     <%= f.text_area :text, :class => "markdown-toolbar" %>
