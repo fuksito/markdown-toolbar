@@ -24,13 +24,10 @@ function MarkdownToolbar(textarea){
          $this.panel.css(pos, $this.textarea.css(pos));
     });
     this.resize_textarea();
-    this.textarea.mouseup(function(){
-      $this.resize_textarea();
-    });
   }
 
   this.resize_textarea = function(){
-    $this.panel.css("width", $this.textarea.width());
+    $this.panel.css("max-width", $this.textarea.width());
   }
 
   this.fill_buttons = function(){
