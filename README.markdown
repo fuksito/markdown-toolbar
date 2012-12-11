@@ -36,6 +36,9 @@ Then you can add toolbar to any textarea by adding a class **markdown-toolbar** 
 
     <%= f.text_area :text, :class => "markdown-toolbar" %>
 
+Alternatively, if you dynamicly create textareas, you can assign markdown toolbar in javascript by creating new instance of MarkdwonToolbar, with a textarea element as argument:
+
+    new MarkdownToolbar($("#some_textarea"));
 
 Customizing
 -----------
