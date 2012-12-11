@@ -46,8 +46,8 @@ Customizing
 You can customize order, remove or add new buttons by copying markdown-toolbar-buttons.js file into your project.
 There is a rails generator to do it:
 
-    rails generator markdown_toolbar:copy_buttons
+    rails generate markdown_toolbar:copy_buttons
 
 To customize stylesheet run:
 
-    rails generator markdown_toolbar:copy_css
+    rails generate markdown_toolbar:copy_css
