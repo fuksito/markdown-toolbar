@@ -6,7 +6,7 @@ module MarkdownToolbar
     
     def copy_buttons
       say_status("copying", "markdown-toolbar-buttons.js", :green)
-      copy_file "javascripts/markdown-toolbar-buttons.js", "public/javascripts/markdown-toolbar-buttons.js"
+      copy_file "javascripts/markdown-toolbar-buttons.js", "app/assets/javascripts/markdown-toolbar-buttons.js"
     end
     
   end

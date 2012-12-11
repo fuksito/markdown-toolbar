@@ -1,3 +1,7 @@
+0.2.4
+=====
+* fix generator path to put files into app/assets
+
 0.2.1
 =====
 * Seperated buttons into config file

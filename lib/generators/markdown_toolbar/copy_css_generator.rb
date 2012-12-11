@@ -6,7 +6,7 @@ module MarkdownToolbar
 
     def copy_css
       say_status("copying", "markdown-toolbar.css.erb", :green)
-      copy_file "stylesheets/markdown-toolbar.css.erb", "public/javascripts/markdown-toolbar.css.erb"
+      copy_file "stylesheets/markdown-toolbar.css.erb", "app/assets/stylesheets/markdown-toolbar.css.erb"
     end
 
   end
