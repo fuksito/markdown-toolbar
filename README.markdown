@@ -40,10 +40,11 @@ Then you can add toolbar to any textarea by adding a class **markdown-toolbar** 
 Customizing
 -----------
 
-You can customize order, remove or add new buttons by copying markdown-toolbar-buttonsjs file into your project, there are rails generator to do it:
+You can customize order, remove or add new buttons by copying markdown-toolbar-buttons.js file into your project.
+There is a rails generator to do it:
 
     rails generator markdown_toolbar:copy_buttons
 
-Yo customize stylesheet run:
+To customize stylesheet run:
 
     rails generator markdown_toolbar:copy_css
