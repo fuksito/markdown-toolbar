@@ -14,7 +14,6 @@ function MarkdownToolbar(textarea){
     this.add_resizer();
   }  
   
-  
   this.add_toolbar = function(){
     this.textarea.before("<div class='markdown-toolbar-panel'><div class='mdt_buttons'></div></div>");
     this.panel = this.textarea.prev(".markdown-toolbar-panel");
@@ -31,32 +30,31 @@ function MarkdownToolbar(textarea){
   }
 
   this.fill_buttons = function(){
-    this.add_button("bold",   "Bold",   "**", "**");
-    this.add_button("italic", "Italic", "*", "*");
-    this.add_button("heading_2",   "Sub title",   "\n## ", " ##\n");
-    this.add_button("heading_3", "Sub-sub title", "\n### ", " ###\n" );
-    this.add_button("list_bullets", "Bulleted list");
-    this.add_button("list_numbers", "Numbered list");
-    this.add_button("image", "Insert Image");
-    this.add_button("link", "Insert Link");
+    $(MarkdownToolbar.buttons).each(function(i, v){
+      $this.add_button_image(v.title, v.id);
+      $this.bind_action(v);
+    });
   }
 
-  this.add_button = function(button_id, title, tagStart, tagEnd){
+  this.add_button_image = function(title, button_id){
     $(".mdt_buttons", this.panel).append("<div class='mdt_button mdt_button_" + button_id + "' title='"+ title + "'></div>");
-    $(".mdt_button_" + button_id, this.panel).bind('click', function(event) {
-      switch(button_id){
-        case "bold":
-        case "italic":
-        case "heading_2":
-        case "heading_3":
-          $this.perform_insert_tag(button_id, tagStart, tagEnd);
-          break;
+  }
 
+  this.bind_action = function(options){
+    $(".mdt_button_" + options.id, this.panel).bind('click', function(event) {
+      switch(options.type){
+        case 'wrapper':
+          $this.perform_insert_line_wrapper(options.id, options.left, options.right);
+          break;
+        case 'block_wrapper':
+          $this.perform_insert_block_wrapper(options.id, options.left, options.right);
+          break;        
+        case 'prefixer':
+          $this.perform_insert_prefixer(options.id, options.left); // todo
+          break;
         case "list_numbers":
-        case "list_bullets":
-          $this.perform_insert_list(button_id)
+          $this.perform_insert_list(options.id)
           break;
-
         case "image":
           $this.perform_insert_image();
           break;
@@ -67,8 +65,7 @@ function MarkdownToolbar(textarea){
     });
   }
 
-
-  this.perform_insert_tag = function(button_id, tagStart, tagEnd){
+  this.perform_insert_line_wrapper = function(button_id, tagStart, tagEnd){
     
     var the_text = $this.selected_text();
 
@@ -86,6 +83,20 @@ function MarkdownToolbar(textarea){
         final_text += "\n";
       }
     });
+
+    $this.textarea.replaceSelection( final_text , true );
+    $this.textarea.focus();
+  }
+
+  this.perform_insert_block_wrapper = function(button_id, top, bottom){
+    
+    var the_text = $this.selected_text();
+
+    if(the_text.length == 0){
+     the_text = "" + button_id + " text";
+    }
+
+    var final_text = top + the_text + bottom;
 
     $this.textarea.replaceSelection( final_text , true );
     $this.textarea.focus();
@@ -121,6 +132,26 @@ function MarkdownToolbar(textarea){
     $this.textarea.focus();
   }
 
+  this.perform_insert_prefixer = function(button_id, left) {
+    var the_text   = this.selected_text();
+    if (the_text.length == 0){
+      the_text = "Apple\nBananna\nOrange"
+    }
+
+    var lines = the_text.split("\n");
+    var final_text = ""
+
+    $(lines).each(function(i, line){
+
+      final_text += left + line;
+      if (i < lines.length){
+        final_text += "\n";
+      }
+    });
+
+    $this.textarea.replaceSelection( final_text , true );
+    $this.textarea.focus();
+  }
 
   this.perform_insert_image = function(){
     var the_text   = this.selected_text()

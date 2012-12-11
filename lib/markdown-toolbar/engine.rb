@@ -1,6 +1,4 @@
-module Markdown
-  module Toolbar
+module MarkdownToolbar
     class Engine < ::Rails::Engine
     end
-  end
 end

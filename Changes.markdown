@@ -1,3 +1,9 @@
+0.2.1
+=====
+* Seperated buttons into config file
+* Generalized button callbacks, so can create new buttons in config file
+* Generators to copy js/css files for customization
+
 0.1.2
 =====
 * If textarea is resized the toolbar will also be resized

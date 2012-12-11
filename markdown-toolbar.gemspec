@@ -4,7 +4,7 @@ require "markdown-toolbar/version"
 
 Gem::Specification.new do |s|
   s.name        = "markdown-toolbar"
-  s.version     = Markdown::Toolbar::VERSION
+  s.version     = MarkdownToolbar::VERSION
   s.authors     = ["Vitaliy Yanchuk"]
   s.email       = ["fuksito@gmail.com"]
   s.homepage    = ""

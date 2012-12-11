@@ -1,2 +1,3 @@
 //= require jquery-fieldselection
-//= require toolbar.js
+//= require markdown-toolbar-core.js
+//= require markdown-toolbar-buttons.js

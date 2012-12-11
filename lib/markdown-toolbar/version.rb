@@ -1,5 +1,3 @@
-module Markdown
-  module Toolbar
-    VERSION = "0.1.3"
-  end
+module MarkdownToolbar
+  VERSION = "0.2.3"
 end

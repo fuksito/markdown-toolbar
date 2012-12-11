@@ -30,14 +30,7 @@
   margin-left:2px;
 }
 
-/* Check this out:
-
-<%= self.class.ancestors %>
-
-<%= self.public_methods.inspect %>
-*/
-
-<% %w{ bold italic strike list_bullets list_numbers heading_2 heading_3 link image}.each_with_index do |button, index| %>
+<% %w{ delimiter code blockquote bold italic strike list_bullets list_numbers heading_1 heading_2 heading_3 link image}.each_with_index do |button, index| %>
 .mdt_button_<%= button %> {
   background: url( <%= asset_path "text_#{button}.png" %>);
 }
