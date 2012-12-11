@@ -6,7 +6,7 @@ Markdown Toolbar is an lightweight helper buttons that appear over textarea
 [![image](http://www.vitalik.com.ua/images/markdown-toolbar.png)](http://www.vitalik.com.ua/markdown-toolbar/)
 
 
-Try a demonstration [demonstration](http://www.vitalik.com.ua/markdown-toolbar/)
+Try a [demonstration](http://www.vitalik.com.ua/markdown-toolbar/)
 
 
 Installation
@@ -36,14 +36,18 @@ Then you can add toolbar to any textarea by adding a class **markdown-toolbar** 
 
     <%= f.text_area :text, :class => "markdown-toolbar" %>
 
+Alternatively, if you dynamicly create textareas, you can assign markdown toolbar in javascript by creating new instance of MarkdwonToolbar, with a textarea element as argument:
+
+    new MarkdownToolbar($("#some_textarea"));
 
 Customizing
 -----------
 
-You can customize order, remove or add new buttons by copying markdown-toolbar-buttonsjs file into your project, there are rails generator to do it:
+You can customize order, remove or add new buttons by copying markdown-toolbar-buttons.js file into your project.
+There is a rails generator to do it:
 
-    rails generator markdown_toolbar:copy_buttons
+    rails generate markdown_toolbar:copy_buttons
 
-Yo customize stylesheet run:
+To customize stylesheet run:
 
-    rails generator markdown_toolbar:copy_css
+    rails generate markdown_toolbar:copy_css
