@@ -51,3 +51,8 @@ There is a rails generator to do it:
 To customize stylesheet run:
 
     rails generate markdown_toolbar:copy_css
+    
+License
+-------
+
+Markdown Toolbar is released under the {MIT License}[http://www.opensource.org/licenses/MIT].
