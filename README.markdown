@@ -55,4 +55,4 @@ To customize stylesheet run:
 License
 -------
 
-Markdown Toolbar is released under the {MIT License}[http://www.opensource.org/licenses/MIT].
+Markdown Toolbar is released under the [MIT License](http://www.opensource.org/licenses/MIT).
