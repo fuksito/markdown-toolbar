@@ -3,10 +3,10 @@ Markdown Toolbar
 
 Markdown Toolbar is an lightweight helper buttons that appear over textarea
 
-[![image](http://www.vitalik.com.ua/images/markdown-toolbar.png)](http://www.vitalik.com.ua/markdown-toolbar/)
+[![image](http://fuksito.com/markdown-toolbar-preview.png)](http://markdown-toolbar-example.herokuapp.com/)
 
 
-Try a [demonstration](http://www.vitalik.com.ua/markdown-toolbar/)
+Try a [demonstration](http://markdown-toolbar-example.herokuapp.com/)
 
 
 Installation
