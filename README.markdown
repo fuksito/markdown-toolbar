@@ -12,13 +12,17 @@ Try a [demonstration](http://markdown-toolbar-example.herokuapp.com/)
 Installation
 ------------
 
-In `Rails 3.1`, add this to your Gemfile and run the **bundle** command.
+### Rails 4.1+
+
+Use version 1.0.0
+
+### Rails 3 and before 4.1
+
+use version 0.2.4
+
+In any rails version Add this to your Gemfile and run the **bundle** command.
 
     gem "markdown-toolbar"
-
-Alternatively, you can install it as a plugin.
-
-    rails plugin install git://github.com/fuksito/markdown-toolbar.git
 
 
 Getting Started
@@ -31,7 +35,7 @@ Markdown Toolbar requires you to add such lines to your application.js
 and to application.css
 
     *= require markdown-toolbar
-  
+
 Then you can add toolbar to any textarea by adding a class **markdown-toolbar** to it
 
     <%= f.text_area :text, :class => "markdown-toolbar" %>
@@ -51,7 +55,7 @@ There is a rails generator to do it:
 To customize stylesheet run:
 
     rails generate markdown_toolbar:copy_css
-    
+
 License
 -------
 
