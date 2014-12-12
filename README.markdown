@@ -1,4 +1,5 @@
 Markdown Toolbar
+[![Gem Version](https://badge.fury.io/rb/markdown-toolbar.svg)](http://badge.fury.io/rb/markdown-toolbar)
 ================
 
 Markdown Toolbar is an lightweight helper buttons that appear over textarea
