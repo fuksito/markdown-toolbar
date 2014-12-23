@@ -16,15 +16,17 @@ Installation
 
 ### Rails 4.1+
 
-Use version 1.0.0
+Use version 1.0.0, add to Gemfile:
+
+    gem "markdown-toolbar", "~> 1.0"
 
 ### Rails 3 and before 4.1
 
-use version 0.2.4
+use version 0.2.4, add to Gemfile
 
-In any rails version Add this to your Gemfile and run the **bundle** command.
+    gem "markdown-toolbar", "~> 0.2.4"
 
-    gem "markdown-toolbar"
+And run the **bundle** command.
 
 
 Getting Started
