@@ -5,6 +5,7 @@ $(function(){
 });
 
 function MarkdownToolbar(textarea){
+  var $this;
   
   this.init = function(textarea){
     $this = this;
