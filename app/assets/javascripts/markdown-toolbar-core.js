@@ -38,7 +38,12 @@ function MarkdownToolbar(textarea){
   }
 
   this.add_button_image = function(title, button_id){
-    $(".mdt_buttons", this.panel).append("<div class='mdt_button mdt_button_" + button_id + "' title='"+ title + "'></div>");
+    var button = "<div class='mdt_button mdt_button_" + button_id;
+    if(title) {
+      button += "' title='"+ title;
+    }
+    button += "'></div>";
+    $(".mdt_buttons", this.panel).append(button);
   }
 
   this.bind_action = function(options){
