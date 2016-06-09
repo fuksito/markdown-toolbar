@@ -9,6 +9,7 @@ Markdown Toolbar is an lightweight helper buttons that appear over textarea
 
 
 Try a [demonstration](http://markdown-toolbar-example.herokuapp.com/) 
+
 (Wait for load, as the heroku instance that serves demo is probably sleeping now, so it takes time for it to wake up)
 
 Installation
